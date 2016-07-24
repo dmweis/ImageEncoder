@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageEncoderConsole", "Imag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageEncoder", "ImageEncoder\ImageEncoder.csproj", "{1635DA1E-8041-4F2F-9350-5029A7D0E86E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageEncoderWPF", "ImageEncoderWPF\ImageEncoderWPF.csproj", "{201E5D98-3528-4A9D-B2DF-49A694BD0A1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageDecoderWPF", "ImageDecoderWPF\ImageDecoderWPF.csproj", "{033ECC7E-7ABF-47B7-8F24-493D8202765D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{1635DA1E-8041-4F2F-9350-5029A7D0E86E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1635DA1E-8041-4F2F-9350-5029A7D0E86E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1635DA1E-8041-4F2F-9350-5029A7D0E86E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{201E5D98-3528-4A9D-B2DF-49A694BD0A1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{201E5D98-3528-4A9D-B2DF-49A694BD0A1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{201E5D98-3528-4A9D-B2DF-49A694BD0A1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{201E5D98-3528-4A9D-B2DF-49A694BD0A1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{033ECC7E-7ABF-47B7-8F24-493D8202765D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{033ECC7E-7ABF-47B7-8F24-493D8202765D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{033ECC7E-7ABF-47B7-8F24-493D8202765D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{033ECC7E-7ABF-47B7-8F24-493D8202765D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

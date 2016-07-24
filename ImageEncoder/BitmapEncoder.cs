@@ -28,10 +28,6 @@ namespace ImageEncoder
                 tmpByte = (byte)( tmpByte | ( GetByteFromImage( image, i + 6 ) << 1 ) );
                 tmpByte = (byte)( tmpByte | GetByteFromImage( image, i + 7 ) );
                 char readCharacter = Convert.ToChar( tmpByte );
-                if( i > 1000 )
-                {
-                    break;
-                }
                 resultString.Append( readCharacter );
                 if( resultString.Length == 10 )
                 {

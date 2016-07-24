@@ -5,22 +5,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using System.IO;
+using ImageEncoder;
 
 namespace ImageEncoderConsole
 {
     class Program
     {
         private static readonly string originalFilePath = @"D:\Programming\C#\Visual_studio_projects\ImageEncoder\Images\largeImage.bmp";
-        private static readonly string newFilePath = @"D:\Programming\C#\Visual_studio_projects\ImageEncoder\Images\CreatedImage.bmp";
+        private static readonly string newFilePath = @"D:\Programming\C#\Visual_studio_projects\ImageEncoder\Images\largeImage_ENCODED.bmp";
         private static readonly string staticText = "ctp ";
         private const int numberOfImages = 5;
         static void Main(string[] args)
         {
             Console.WriteLine( "Starting" );
-            SaveToImage( originalFilePath, newFilePath, staticText );
-            Console.WriteLine( ExtractFromImage( newFilePath ) );
-            TestFileData(newFilePath);
-            //Bitmap image = new Bitmap(newFilePath);
+            BitmapEncoder.EncodeImage( originalFilePath, newFilePath, "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." );
+            Console.WriteLine(BitmapEncoder.DecodeImage(newFilePath));
+            TestFileData( newFilePath );
             Console.WriteLine( "Ending" );
             Console.ReadKey();
         }
@@ -205,7 +205,7 @@ namespace ImageEncoderConsole
         private static void TestFileData( string path )
         {
             Bitmap image = new Bitmap( path );
-            for( int i = 0 ; i < 200 ; i++ )
+            for( int i = 0 ; i < 2000 ; i++ )
             {
                 Console.Write( GetByteFromImage( image, i ) );
                 if( (i+1) % 8 == 0 )
