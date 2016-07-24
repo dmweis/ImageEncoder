@@ -20,6 +20,7 @@ namespace ImageEncoderWPF
         private void browse_button_Click( object sender, RoutedEventArgs e )
         {
             Microsoft.Win32.OpenFileDialog dialog = new Microsoft.Win32.OpenFileDialog();
+            dialog.InitialDirectory = Directory.GetCurrentDirectory();
             dialog.FileName = "largeImage";
             dialog.DefaultExt = ".bmp";
             dialog.Filter = "Bitmap Files (.bmp)|*.bmp";
@@ -33,7 +34,7 @@ namespace ImageEncoderWPF
         private void Encode_Click( object sender, RoutedEventArgs e )
         {
             BitmapEncoder.EncodeImage( path_field.Text, path_field.Text.Replace( ".bmp", "_ENCODED.bmp" ), message_box.Text );
-            MessageBox.Show( "Encoidng finished" );
+            MessageBox.Show( this, "Encoidng finished" );
         }
     }
 }

@@ -23,6 +23,7 @@ namespace ImageDecoderWPF
         private void browse_button_Click( object sender, RoutedEventArgs e )
         {
             Microsoft.Win32.OpenFileDialog dialog = new Microsoft.Win32.OpenFileDialog();
+            dialog.InitialDirectory = Directory.GetCurrentDirectory();
             dialog.FileName = "largeImage";
             dialog.DefaultExt = ".bmp";
             dialog.Filter = "Bitmap Files (.bmp)|*.bmp";
@@ -30,6 +31,7 @@ namespace ImageDecoderWPF
             if( success == true )
             {
                 path_field.Text = dialog.FileName;
+                message_box.Text = BitmapEncoder.DecodeImage( path_field.Text );
             }
         }
 
